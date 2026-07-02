@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+dist/
+.env
+/.netlify
+/.vercel
+Thumbs.db
+.idea/
+*.log
+__pycache__/
+*.pyc

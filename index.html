@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personnel de Bakary Moufid, étudiant en Sciences et Technologies.">
+    <title>My ortfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    </div>
+
+    <!-- Calque d'arrière-plan animé (canvas) -->
+    <div id="bg-layer" aria-hidden="true"><canvas id="bg-canvas"></canvas></div>
+
+    <!-- Curseur personnalisé -->
+    <div id="cursor" class="custom-cursor" aria-hidden="true"></div>
+
+    <!-- Barre de progression du scroll -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar"></div></div>
+    <!-- En-tête principal du portfolio -->
+    <header class="site-header">
+        <div class="container">
+            <a class="site-header__logo" href="#home">Bakary Moufid</a>
+
+            <button class="site-nav__toggle" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" aria-label="Navigation principale" data-open="false" id="site-navigation">
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#parcours-academique">Parcours</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section d'accueil du portfolio -->
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero__content hero__content--left">
+                <p class="hero__intro reveal--seq" data-order="1">Bonjour, je suis</p>
+                <h1 id="hero-title" class="hero__title reveal--seq" data-order="2">BAKARY MOUFID</h1>
+                <h2 class="hero__subtitle reveal--seq" data-order="3"><span class="typing-target">Étudiant en Cycle Ingénieur – Sciences et Technologies</span><span class="typing-cursor" aria-hidden="true"></span></h2>
+                <p class="hero__mini reveal--seq" data-order="4">Future Supply Chain & Industrial Engineer</p>
+                <p class="hero__description reveal--seq" data-order="5">
+                    Je suis passionné par les technologies, l'innovation et le développement de compétences,
+                    avec un réel intérêt pour la création de solutions modernes et utiles.
+                </p>
+                <p class="hero__description reveal--seq" data-order="6">
+                   Je me spécialise progressivement dans les domaines de la Supply Chain, du Génie Industriel et de l'Intelligence Artificielle afin de contribuer à la transformation numérique des entreprises et à l'optimisation des processus industriels.
+                </p>
+                <div class="hero__actions reveal--seq" data-order="7">
+                    <a href="#parcours-academique" class="hero__button hero__button--primary btn-ripple">Découvrir mon parcours</a>
+                    <a href="cv/BAKARY_MOUFID_CV.pdf" class="hero__button hero__button--secondary hero__button--download btn-ripple" download="BAKARY_MOUFID_CV.pdf" id="download-cv-button">
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> 📄 Télécharger mon CV
+                    </a>
+                    <a href="cv/BAKARY_MOUFID_CV.pdf" class="hero__button hero__button--secondary hero__button--view" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-eye" aria-hidden="true"></i> 👁️ Consulter mon CV
+                    </a>
+                </div>
+
+                <div class="hero__metrics reveal--seq" data-order="8">
+                    <div class="metric-card">
+                        <span class="metric-card__label">Années d'apprentissage</span>
+                        <strong class="metric-card__value">6+</strong>
+                        <span class="metric-card__note">Technologies, industrie et logistique</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-card__label">Domaines cibles</span>
+                        <strong class="metric-card__value">5</strong>
+                        <span class="metric-card__note">Web, IA, Supply Chain, Industrie 4.0, Data</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-card__label">Projets</span>
+                        <strong class="metric-card__value">+12</strong>
+                        <span class="metric-card__note">Projets académiques et personnels</span>
+                    </div>
+                </div>
+            </div>
+
+            <figure class="hero__visual hero__visual--right" aria-label="Emplacement photo de profil">
+                <div class="hero__photo-placeholder tilt float">Photo de profil</div>
+
+                <aside class="hero__overlay-card hero__overlay-card--top">
+                    <h4>Profil créatif</h4>
+                    <p>Design premium, interface dashboard et storytelling professionnel.</p>
+                </aside>
+
+                <aside class="hero__overlay-card hero__overlay-card--bottom">
+                    <h4>Compétences clés</h4>
+                    <p>Supply Chain, Génie Industriel, IA, Web et analyse de données.</p>
+                </aside>
+
+                <aside class="hero__overlay-card hero__overlay-card--side">
+                    <h4>Objectif</h4>
+                    <p>Construire des expériences digitales puissantes et visuelles.</p>
+                </aside>
+            </figure>
+        </section>
+
+        
+        <section class="about" id="about" aria-labelledby="about-title">
+            <figure class="about__image-column">
+                <div class="about__image-placeholder" aria-hidden="true">
+                    <span>Portrait</span>
+                </div>
+            </figure>
+
+            <div class="about__content-column">
+                <h2 id="about-title">À propos de moi</h2>
+                <p class="about__details">
+                    Né le 17 Septembre 2007 à Cotonou (Bénin).                    netlify sites:create --name mon-super-siteUne ouverture au monde qui façonne ma vision
+
+Mon parcours m'a offert la chance d'évoluer dans plusieurs pays d'Afrique de l'Ouest, notamment le Bénin, le Togo, le Sénégal et la Côte d'Ivoire. Vivre au sein de cultures, d'histoires et de traditions différentes m'a appris à comprendre les réalités de chacun, à m'adapter rapidement à de nouveaux environnements et à apprécier la richesse de la diversité culturelle.
+
+Je parle le français, l'anglais, ainsi que deux langues africaines : le wolof et le fon, ce qui me permet de communiquer avec des personnes issues de différents horizons et de créer facilement des liens interculturels.
+
+J'ai également eu l'opportunité de découvrir des pays occidentaux tels que les États-Unis et la France. Ces expériences internationales ont élargi ma vision du monde, renforcé ma curiosité et développé ma capacité à évoluer dans des contextes multiculturels.
+
+Aujourd'hui, je considère cette diversité d'expériences comme l'un de mes plus grands atouts. Elle m'a permis de développer un leadership fondé sur l'écoute, l'adaptabilité et la collaboration. Elle influence ma manière d'apprendre, de résoudre des problèmes, de travailler en équipe et de relever de nouveaux défis avec une perspective à la fois locale et internationale.
+
+                </p>
+                <p class="about__text">
+                    Je suis un étudiant passionné par les technologies, l’innovation et la création de solutions modernes.
+                    Mon objectif est de développer des compétences solides dans le domaine du numérique et de contribuer à des projets utiles et inspirants.
+                </p>
+                <p class="about__qualities">
+                    Je suis curieux, motivé, rigoureux et toujours prêt à apprendre de nouvelles connaissances.
+                    Ces qualités me permettent d’aborder les défis avec sérieux, créativité et enthousiasme.
+                </p>
+                <p class="about__goals">
+                    Mes objectifs professionnels consistent à renforcer mon expertise technique, à construire une expérience solide
+                    et à évoluer dans des environnements où l’innovation et la performance ont une vraie valeur.
+                </p>
+                
+            </div>
+        </section>
+
+        
+        <section class="academic" id="parcours-academique" aria-labelledby="academic-title">
+            <h2 id="academic-title">Parcours académique</h2>
+
+            <div class="academic__timeline">
+                <article class="academic__item">
+                    <div class="academic__content">
+                        <p class="academic__year">2017-2018</p>
+                        <h3 class="academic__title">LOME-TOGO</h3>
+                        <p class="academic__institution">T.I.I.O.L(Truss International Institute of Lomé)</p>
+                        <p class="academic__description">Au cours de cette année scolaire, j'ai maintenu un excellent niveau de performance académique, avec des moyennes constamment supérieures à 18/20. Ces résultats m'ont permis de conserver ma place de premier de la classe tout au long de l'année, témoignant de ma régularité, de ma rigueur et de mon engagement dans mes études. À l'issue des différentes évaluations, notamment l'examen blanc, j'ai achevé l'année en me classant 7ᵉ de mon centre d'examen, confirmant ainsi la qualité de mon parcours scolaire et ma capacité à obtenir d'excellents résultats dans un contexte de forte concurrence.
+</p>
+                    </div>
+                </article>
+
+                <article class="academic__item">
+                    <div class="academic__content">
+                        <p class="academic__year">2018-2019</p>
+                        <h3 class="academic__title">DAKAR-SENEGAL</h3>
+                        <p class="academic__institution">C.E.M.A.D (Complexe Educatif Mamelle Aviation Denango)</p>
+                        <p class="academic__description">Mon parcours scolaire a également été marqué par une remarquable capacité d'adaptation. En effet, malgré mon changement d'environnement éducatif, passant du Togo au Sénégal, j'ai rapidement su m'intégrer et maintenir un niveau d'excellence dès mon entrée en classe de sixième. Grâce à ma rigueur, à ma détermination et à mon investissement constant dans mes études, j'ai obtenu d'excellents résultats académiques tout au long de cette première année. Ces performances m'ont valu plusieurs distinctions honorifiques, notamment des inscriptions au tableau d'honneur, les félicitations et encouragements du Directeur des Études, ainsi qu'un diplôme d'excellence qui m'a été décerné lors de la cérémonie annuelle de la Fête de l'Excellence. Cette expérience illustre ma capacité à exceller, même dans un contexte de transition, et témoigne de mon engagement constant envers la réussite scolaire.
+
+</p>
+                    </div>
+                </article>
+
+                <article class="academic__item">
+                    <div class="academic__content">
+                        <p class="academic__year">2020-2022</p>
+                        <h3 class="academic__title">DAKAR-SENEGAL</h3>
+                        <p class="academic__institution">L.E.P BIRAGO DIOP (Lycée d'Excellence Privée Birago Diop)</p>
+                        <p class="academic__description">À la suite d'une année blanche, ma reprise en classe de quatrième a constitué une étape de réadaptation, marquée par des résultats relativement modestes. Loin de me décourager, cette expérience a renforcé ma détermination et ma volonté de progresser. Dès l'année scolaire suivante, j'ai démontré une nette amélioration de mes performances grâce à un travail soutenu, une discipline rigoureuse et un engagement constant. Cette progression s'est traduite par des résultats remarquables tout au long de l'année et s'est concrétisée par une moyenne générale de 13,21/20 à l'examen final, me permettant d'occuper la 10ᵉ place de mon centre d'examen. Ce parcours illustre ma capacité à transformer les difficultés en opportunités de progression et à atteindre des objectifs ambitieux grâce à la persévérance et à l'effort marquant la fin de mon cycle collégial avec succès.
+</p>
+                    </div>
+                </article>
+
+                <article class="academic__item">
+                    <div class="academic__content">
+                        <p class="academic__year">2022-2023(Décembre)</p>
+                        <h3 class="academic__title">DAKAR-SENEGAL</h3>
+                        <p class="academic__institution">L.E.P BIRAGO DIOP (Lycée d'Excellence Privée Birago Diop)</p>
+                        <p class="academic__description">Au cours de cette période, mon parcours scolaire a connu des phases de progression comme des moments plus exigeants. Toutefois, j'ai toujours su faire preuve de résilience, de persévérance et d'un esprit de saine compétition, ce qui m'a permis de me maintenir de manière constante parmi les dix meilleurs élèves de ma promotion. Malheureusement, en raison d'une mutation professionnelle de mon père, j'ai été contraint de quitter mon établissement au cours du premier trimestre de la classe de première afin de poursuivre ma scolarité en Côte d'Ivoire. Bien que ce changement ait constitué un nouveau défi, il a également renforcé ma capacité d'adaptation et ma détermination à poursuivre mon parcours académique avec sérieux et ambition.
+</p>
+                    </div>
+                </article>
+                <article class="academic__item">
+                    <div class="academic__content">
+                        <p class="academic__year">Janvier 2024-Mai 2024</p>
+                        <h3 class="academic__title">ABIDJAN-CÔTE D'IVOIRE</h3>
+                        <p class="academic__institution">GROUPE SCOLAIRE AL-GHADIR</p>
+                        <p class="academic__description">Mon intégration dans le système éducatif ivoirien a représenté un défi majeur en raison du changement d'environnement, de l'adaptation à un nouveau programme scolaire et de mon arrivée en cours de parcours. Malgré un retard académique important et un écart de niveau significatif avec mes camarades, j'ai fait preuve d'une détermination sans faille, d'une grande capacité d'adaptation et d'un engagement constant dans mon travail. Grâce à des efforts soutenus et à une discipline rigoureuse, j'ai progressivement comblé mes lacunes pour terminer l'année scolaire à la **2ᵉ place de ma classe**, avec une **moyenne générale de 13,90/20**. Ce résultat illustre ma capacité à transformer les difficultés en opportunités de progression et à atteindre un haut niveau de performance, même dans un contexte particulièrement exigeant.</p>
+                    </div>
+                </article>
+                <article class="academic__item">
+                    <div class="academic__content">
+                        <p class="academic__year">2024-2025</p>
+                        <h3 class="academic__title">ABIDJAN-CÔTE D'IVOIRE</h3>
+                        <p class="academic__institution">LYCEE INTERNATIONALE FRED & POPEE</p>
+                        <p class="academic__description">Ma dernière année de lycée a été marquée par une progression constante et des performances académiques solides. J'y ai particulièrement excellé dans les disciplines scientifiques, où je me suis régulièrement classé premier de la classe, témoignant de mon intérêt marqué et de mes aptitudes dans ces matières. Bien que mes résultats dans les disciplines littéraires aient été plus modestes, ils n'ont en rien compromis l'équilibre de mon parcours académique, puisque j'ai terminé l'année à la **2ᵉ place de ma classe**. Cette régularité dans l'effort et cette excellence dans les matières scientifiques m'ont permis d'obtenir le **Baccalauréat, série D (scientifique)** avec un total de **224 points**, sanctionné par la **mention Passable**. Ce parcours reflète ma capacité à capitaliser sur mes points forts tout en poursuivant des efforts constants pour améliorer l'ensemble de mes compétences.
+</p>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+        <!-- Section des compétences -->
+        <section class="skills" id="competences" aria-labelledby="skills-title">
+            <div class="skills__intro">
+                <p class="skills__eyebrow">Compétences</p>
+                <h2 id="skills-title">Compétences techniques et industrielles</h2>
+                <p class="skills__subtitle">Étudiant en Cycle Ingénieur en Sciences et Technologies, je développe des compétences orientées vers l'ingénierie Supply Chain, le Génie Industriel et l'Intelligence Artificielle.</p>
+            </div>
+
+            <div class="skills__grid">
+                <article class="skills__card">
+                    <div class="skills__card-media">
+                        <img class="skills__card-image" src="image/web-development.png" alt="Illustration de développement Web" loading="lazy">
+                    </div>
+                    <div class="skills__card-header">
+                        <div class="skills__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+                        <div>
+                            <h3 class="skills__title">Développement Web</h3>
+                            <p class="skills__description">Compétences acquises en développement Front-End.</p>
+                        </div>
+                    </div>
+                    <ul class="skills__list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript (Bases)</li>
+                        <li>Responsive Design</li>
+                        <li>Git / GitHub <span class="skills__tag skills__tag--learning">En apprentissage</span></li>
+                    </ul>
+                </article>
+
+                <article class="skills__card">
+                    <div class="skills__card-media">
+                        <img class="skills__card-image" src="image/licensed-image.jpg" alt="Illustration Sciences et Technologies" loading="lazy">
+                    </div>
+                    <div class="skills__card-header">
+                        <div class="skills__icon"><i class="fa-solid fa-atom" aria-hidden="true"></i></div>
+                        <div>
+                            <h3 class="skills__title">Sciences & Technologies</h3>
+                            <p class="skills__description">Fondations scientifiques et technologiques acquises au Cycle Ingénieur.</p>
+                        </div>
+                    </div>
+                    <ul class="skills__list">
+                        <li>Mathématiques appliquées</li>
+                        <li>Physique</li>
+                        <li>Informatique</li>
+                        <li>Algorithmique</li>
+                        <li>Analyse de données (Bases)</li>
+                    </ul>
+                </article>
+
+                <article class="skills__card">
+                    <div class="skills__card-media">
+                        <img class="skills__card-image" src="image/supply-chain.jpg" alt="Illustration Supply Chain" loading="lazy">
+                    </div>
+                    <div class="skills__card-header">
+                        <div class="skills__icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div>
+                        <div>
+                            <h3 class="skills__title">Supply Chain</h3>
+                            <p class="skills__description">Domaines vers lesquels je souhaite me spécialiser.</p>
+                        </div>
+                    </div>
+                    <ul class="skills__list">
+                        <li>Logistique</li>
+                        <li>Gestion des stocks</li>
+                        <li>Transport</li>
+                        <li>Approvisionnement</li>
+                        <li>Gestion des flux</li>
+                        <li>Planification</li>
+                    </ul>
+                </article>
+
+                <article class="skills__card">
+                    <div class="skills__card-media">
+                        <img class="skills__card-image" src="image/genie-industriel.png" alt="Illustration Génie Industriel" loading="lazy">
+                    </div>
+                    <div class="skills__card-header">
+                        <div class="skills__icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></div>
+                        <div>
+                            <h3 class="skills__title">Génie Industriel</h3>
+                            <p class="skills__description">Compétences que je développe progressivement.</p>
+                        </div>
+                    </div>
+                    <ul class="skills__list">
+                        <li>Optimisation des processus</li>
+                        <li>Production</li>
+                        <li>Gestion de la qualité</li>
+                        <li>Lean Manufacturing <span class="skills__tag skills__tag--discovery">Découverte</span></li>
+                        <li>Industrie 4.0</li>
+                    </ul>
+                </article>
+
+                <article class="skills__card">
+                    <div class="skills__card-media">
+                        <img class="skills__card-image" src="image/intelligence-artificielle.png" alt="Illustration Intelligence Artificielle" loading="lazy">
+                    </div>
+                    <div class="skills__card-header">
+                        <div class="skills__icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+                        <div>
+                            <h3 class="skills__title">Intelligence Artificielle</h3>
+                            <p class="skills__description">Technologies qui m'intéressent particulièrement.</p>
+                        </div>
+                    </div>
+                    <ul class="skills__list">
+                        <li>IA Générative</li>
+                        <li>Machine Learning <span class="skills__tag skills__tag--discovery">Découverte</span></li>
+                        <li>Automatisation</li>
+                        <li>Analyse prédictive</li>
+                        <li>Smart Manufacturing</li>
+                    </ul>
+                </article>
+
+                <article class="skills__card">
+                    <div class="skills__card-media">
+                        <img class="skills__card-image" src="image/outils-logiciels.png" alt="Illustration Outils et Logiciels" loading="lazy">
+                    </div>
+                    <div class="skills__card-header">
+                        <div class="skills__icon"><i class="fa-solid fa-laptop" aria-hidden="true"></i></div>
+                        <div>
+                            <h3 class="skills__title">Outils & Logiciels</h3>
+                            <p class="skills__description">Logiciels utilisés ou en cours d'apprentissage.</p>
+                        </div>
+                    </div>
+                    <ul class="skills__list">
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft PowerPoint</li>
+                        <li>Visual Studio Code</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Power BI <span class="skills__tag skills__tag--learning">En apprentissage</span></li>
+                        <li>SAP <span class="skills__tag skills__tag--goal">Objectif</span></li>
+                        <li>ERP <span class="skills__tag skills__tag--goal">Objectif</span></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        
+        <section class="projects" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <p class="section-label">Mes Projets</p>
+                <h2 id="projects-title">Mes Projets</h2>
+                <p class="section-subtitle">Une sélection de projets académiques et personnels illustrant ma progression, ma curiosité et mon intérêt pour les technologies appliquées à l'industrie, à la logistique et au développement web.</p>
+            </div>
+
+            <div class="projects__grid">
+                
+                <article class="project-card">
+                    <div class="project-card__body">
+                        <span class="project-card__badge project-card__badge--web">Développement Web</span>
+                        <h3 class="project-card__title">Portfolio Personnel d'Ingénieur</h3>
+                        <p class="project-card__description">Développement d'un portfolio personnel moderne mettant en valeur mon parcours académique, mes compétences, mes projets et mes ambitions professionnelles dans les domaines de la Supply Chain, du Génie Industriel et de l'Intelligence Artificielle.</p>
+                        <ul class="project-card__tech-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                        <p class="project-card__status">Statut : <strong>Projet terminé</strong></p>
+                        <div class="project-card__actions">
+                            <a class="project-card__button project-card__button--primary" href="#">Voir le projet</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="project-card">
+                    <div class="project-card__body">
+                        <span class="project-card__badge project-card__badge--supply">Supply Chain</span>
+                        <h3 class="project-card__title">Tableau de Bord Logistique</h3>
+                        <p class="project-card__description">Conception d'un tableau de bord permettant de suivre différents indicateurs logistiques tels que les stocks, les flux de transport, les délais de livraison et les performances d'une chaîne d'approvisionnement.</p>
+                        <ul class="project-card__tech-list">
+                            <li>Microsoft Excel</li>
+                            <li>Analyse de données</li>
+                            <li>Power BI <span class="project-card__tag project-card__tag--learning">En apprentissage</span></li>
+                        </ul>
+                        <p class="project-card__status">Statut : <strong>En développement</strong></p>
+                        <div class="project-card__actions">
+                            <a class="project-card__button project-card__button--primary" href="#">Voir le projet</a>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="project-card">
+                    <div class="project-card__body">
+                        <span class="project-card__badge project-card__badge--ai">Intelligence Artificielle</span>
+                        <h3 class="project-card__title">IA & Industrie 4.0</h3>
+                        <p class="project-card__description">Projet de recherche personnelle portant sur les applications de l'Intelligence Artificielle dans la Supply Chain et le Génie Industriel afin d'explorer les technologies qui transforment les entreprises modernes.</p>
+                        <ul class="project-card__tech-list">
+                            <li>Intelligence Artificielle</li>
+                            <li>Smart Manufacturing</li>
+                            <li>Automatisation</li>
+                            <li>Analyse prédictive</li>
+                        </ul>
+                        <p class="project-card__status">Statut : <strong>Recherche en cours</strong></p>
+                        <div class="project-card__actions">
+                            <a class="project-card__button project-card__button--primary" href="#">Voir le projet</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="experiences" id="experiences" aria-labelledby="experiences-title">
+            <div class="section-heading">
+                <p class="section-label">Expériences</p>
+                <h2 id="experiences-title">Expériences marquantes</h2>
+                <p class="section-subtitle">Projets, missions et réalisations qui renforcent mon profil en ingénierie, logistique et gestion de projet.</p>
+            </div>
+
+            <div class="experiences__grid">
+                <article class="experience-card">
+                    <div class="experience-card__header">
+                        <h3 class="experience-card__position">Assistant logistique</h3>
+                        <span class="experience-card__dates">Été 2024</span>
+                    </div>
+                    <p class="experience-card__company">Stage en entreprise industrielle</p>
+                    <p class="experience-card__details">Suivi de stock, optimisation des flux et coordination d’équipes pour améliorer la fiabilité des livraisons.</p>
+                    <ul class="experience-card__bullet-list">
+                        <li>Analyse des stocks et planification d’approvisionnement</li>
+                        <li>Amélioration des processus d’expédition</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-card__header">
+                        <h3 class="experience-card__position">Chef de projet scolaire</h3>
+                        <span class="experience-card__dates">2023</span>
+                    </div>
+                    <p class="experience-card__company">Projet de gestion de production</p>
+                    <p class="experience-card__details">Conception d’un prototype d’atelier intelligent, suivi de production et proposition de KPI pour une meilleure performance.</p>
+                    <ul class="experience-card__bullet-list">
+                        <li>Gestion de planning et coordination d’équipe</li>
+                        <li>Documentation des résultats et restitution visuelle</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-card__header">
+                        <h3 class="experience-card__position">Créateur de portfolio</h3>
+                        <span class="experience-card__dates"> Juin 2026</span>
+                    </div>
+                    <p class="experience-card__company">Design Web & Interface</p>
+                    <p class="experience-card__details">Développement d’un site professionnel premium avec une approche dashboard et une identité visuelle forte.</p>
+                    <ul class="experience-card__bullet-list">
+                        <li>Design glassmorphism et contenus structurés</li>
+                        <li>Animations subtiles et expérience fluide</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <h3>Mes coordonnées</h3>
+                    <p><strong>Email :</strong> <a href="mailto:moufid.abakary@gmail.com">moufid.abakary@gmail.com</a></p>
+                    <p><strong>Téléphone :</strong> <a href="tel:+2250714360969">+225 07 14 36 09 69</a></p>
+                    <p><strong>Adresse :</strong> Abidjan, Côte d'Ivoire</p>
+                    <div class="contact__socials">
+                        <p><strong>Réseaux sociaux :</strong></p>
+                        <ul>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form class="contact__form" action="#" method="post">
+                    <div class="contact__field">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+
+                    <div class="contact__field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="contact__field">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" autocomplete="off" required>
+                    </div>
+
+                    <div class="contact__field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        
+      <a href="#home" class="site-footer__top">Retour en haut</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
